@@ -38,10 +38,10 @@ var app = {
 
              // Called when background mode has been activated
              cordova.plugins.backgroundMode.onactivate = function () {
-                 setTimeout(function (){
+                 setInterval(function (){
                      // Modify the currently displayed notification
                      cordova.plugins.backgroundMode.configure({
-                         title: 'Patient Monitoring', text: 'Tracking ...' + Date.now()
+                         title: 'Patient Monitoring', text: 'Tracking ...' + (new Date())
                      });
                  },2000);
              }
